@@ -1,0 +1,2 @@
+A diferencia de  la directiva single , la directiva master no tiene barrera impícita , es decir , las hebras no esperarán a que las otras terminen su ejecución en un punto determinado .
+Si no la pusieramos , la hebra master no esperaría a que las demás terminasen y el resultado de la suma sería erróneo e indeterminado.
