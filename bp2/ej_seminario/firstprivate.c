@@ -12,7 +12,7 @@
 /*
 SALIDA
 
-thread 2 suma a[4] suma=4
+thread 2 suma a[4] suma=4s
 thread 2 suma a[5] suma=9
 thread 0 suma a[0] suma=0
 thread 0 suma a[1] suma=1
@@ -49,4 +49,3 @@ int main(){
     printf("\nfuera de la seccion parallel suma=%d\n",suma);
 
     return 0;
-}
