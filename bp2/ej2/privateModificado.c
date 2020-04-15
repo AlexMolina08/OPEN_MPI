@@ -33,14 +33,13 @@ thread 0 suma a[1]
 int main(){
     int i , n = 7,
         a[n],
-        suma;
+        suma = 8; //<-- Inicializamos suma fuera de la región parallel
     
     for(i = 0 ; i < n ; ++i) a[i] = i; 
 
 
     #pragma omp parallel private(suma)
     {
-        suma = 8;
         #pragma omp for
         for(i = 0 ; i < n ; ++i){
             suma = suma + a[i];
