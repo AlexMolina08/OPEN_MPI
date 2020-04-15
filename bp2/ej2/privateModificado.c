@@ -6,8 +6,7 @@
 
     La cláusula private establece que cada subproceso tiene su propia instancia de una variable
     o conjunto de ellas
-*/
-/*
+
 SALIDA:
 thread 4 suma a[6]
 thread 3 suma a[5]
@@ -38,18 +37,23 @@ int main(){
     
     for(i = 0 ; i < n ; ++i) a[i] = i; 
 
+
     #pragma omp parallel private(suma)
     {
-        suma = 0;
+        suma = 8;
         #pragma omp for
         for(i = 0 ; i < n ; ++i){
             suma = suma + a[i];
-            printf("thread %d suma a[%d]\n",omp_get_thread_num() , i);
+            printf("thread %d suma a[%d] (suma = %d)\n",omp_get_thread_num() , i , suma);
         }
+
+        printf("\n* thread %d suma=%d",omp_get_thread_num(),suma);
 
     }
 
-            printf("\n* thread %d suma=%d",omp_get_thread_num(),suma);
+
+    printf("\n---FUERA DE LA REGIÓN PARALLEL---");
+    printf("\nSuma = %d",suma);
 
     printf("\n");
 
