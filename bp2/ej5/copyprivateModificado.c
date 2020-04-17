@@ -20,7 +20,9 @@ int main(){
     int n = 9 ,
         i,
         b[n];
+
     for(i=0;i<n;i++) b[i] = -1;
+
     printf("\nAntes de la sección parallel:\n");
     for(i=0;i<n;++i) printf("b[%d]=%d || ",i,b[i]);
     
@@ -38,6 +40,7 @@ int main(){
         #pragma omp for
         for(i=0;i<n;i++) b[i] = a;
     }
+
     printf("\nDespues de la sección parallel:\n");
     for(i=0;i<n;++i) printf("b[%d]=%d || ",i,b[i]);
     printf("\n");

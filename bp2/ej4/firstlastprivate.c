@@ -5,7 +5,7 @@
     para compilar: gcc -O2 -fopenmp -o firstlastprivate firstlastprivate.c
 
     En este codigo , la variable suma se incializa a 0 en todos los threads y al salir 
-    se tiene el valor de la instancia suma del ultimo thread ejecutado
+    se tiene el valor de la instancia suma de la ultima iteración ejecutado
 
 */
 
