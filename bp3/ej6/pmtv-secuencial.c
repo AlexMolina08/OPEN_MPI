@@ -1,3 +1,9 @@
+/*
+    *   Alejandro Molina Criado
+    *   BP3 Arquitectura de Computadores
+    *   06/05/2020
+    *   Para compilar : gcc -O2 -fopenmp -o nombre nombre.c
+*/
 #include <stdlib.h> 
 #include <stdio.h> 
 #include <time.h> 
